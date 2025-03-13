@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformaciones Geométricas con Three.js</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        canvas {
+            display: block;
+        }
+        
+        .controls {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        .button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="controls">
+        <h3>Sol</h3>
+        <label for="translateX_Sol">Traslación X:</label>
+        <input type="range" id="translateX_Sol" min="-5" max="5" step="0.1" value="0"><br>
+
+        <label for="translateY_Sol">Traslación Y:</label>
+        <input type="range" id="translateY_Sol" min="-5" max="5" step="0.1" value="0"><br>
+
+        <label for="rotateX_Sol">Rotación X:</label>
+        <input type="range" id="rotateX_Sol" min="0" max="360" step="1" value="0"><br>
+
+        <label for="rotateY_Sol">Rotación Y:</label>
+        <input type="range" id="rotateY_Sol" min="0" max="360" step="1" value="0"><br>
+
+        <label for="scale_Sol">Escalado:</label>
+        <input type="range" id="scale_Sol" min="0.5" max="2" step="0.1" value="1"><br>
+
+        <h3>Tierra</h3>
+        <label for="translateX_Tierra">Traslación X:</label>
+        <input type="range" id="translateX_Tierra" min="-5" max="5" step="0.1" value="0"><br>
+
+        <label for="translateY_Tierra">Traslación Y:</label>
+        <input type="range" id="translateY_Tierra" min="-5" max="5" step="0.1" value="0"><br>
+
+        <label for="rotateX_Tierra">Rotación X:</label>
+        <input type="range" id="rotateX_Tierra" min="0" max="360" step="1" value="0"><br>
+
+        <label for="rotateY_Tierra">Rotación Y:</label>
+        <input type="range" id="rotateY_Tierra" min="0" max="360" step="1" value="0"><br>
+
+        <label for="scale_Tierra">Escalado:</label>
+        <input type="range" id="scale_Tierra" min="0.5" max="2" step="0.1" value="1"><br>
+
+        <h3>Luna</h3>
+        <label for="translateX_Luna">Traslación X:</label>
+        <input type="range" id="translateX_Luna" min="-5" max="5" step="0.1" value="0"><br>
+
+        <label for="translateY_Luna">Traslación Y:</label>
+        <input type="range" id="translateY_Luna" min="-5" max="5" step="0.1" value="0"><br>
+
+        <label for="rotateX_Luna">Rotación X:</label>
+        <input type="range" id="rotateX_Luna" min="0" max="360" step="1" value="0"><br>
+
+        <label for="rotateY_Luna">Rotación Y:</label>
+        <input type="range" id="rotateY_Luna" min="0" max="360" step="1" value="0"><br>
+
+        <label for="scale_Luna">Escalado:</label>
+        <input type="range" id="scale_Luna" min="0.5" max="2" step="0.1" value="1"><br>
+
+        <!-- Botón para activar/desactivar rotación automática -->
+        <button class="button" id="autoRotateButton">Activar Rotación Automática</button><br>
+
+        <label for="speedControl">Velocidad de Rotación:</label>
+        <input type="range" id="speedControl" min="0.01" max="0.1" step="0.001" value="0.01"><br>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@latest/build/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
